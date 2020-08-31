@@ -2,7 +2,7 @@ const dot = "<img src='dot.png' height='50'></img>" //Let kids make the dots big
 
 async function start() {
     var dots = ""
-    const number = random(25, 100) //Let kids choose this range
+    const number = random(10, 30) //Let kids choose this range
     for (var i = 0; i < number; i++) {
         dots += dot
     }
@@ -11,7 +11,7 @@ async function start() {
     await wait(3) //Let kids choose how long to wait
 
     document.getElementById("container").innerHTML = ""
-
+    await wait(1)
     var guess = window.prompt("How many dots was that?")
     if (guess == number) {
         window.alert("Nice job! You got it!")
